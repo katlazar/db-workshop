@@ -4,7 +4,7 @@ import org.goforjava.db.DB;
 import org.goforjava.domain.Department;
 import org.goforjava.domain.Employee;
 import org.goforjava.domain.Id;
-import org.goforjava.domain.Localtion;
+import org.goforjava.domain.Location;
 
 import java.time.LocalDate;
 
@@ -19,13 +19,13 @@ public class MockDataFactory {
     }
 
     public void populateDepartments() {
-        departmentDB.put(new Id("d1"), new Department(new Id("d1"), "Ministerstwo Magii", Localtion.POLAND));
-        departmentDB.put(new Id("d2"), new Department(new Id("d2"), "Departament Tajemnic", Localtion.POLAND));
-        departmentDB.put(new Id("d3"), new Department(new Id("d3"), "Departament Kontroli Nad Magicznymi Stworzeniami", Localtion.FRANCE));
-        departmentDB.put(new Id("d4"), new Department(new Id("d4"), "Departament Przestrzegania Prawa Magicznego", Localtion.GERMANY));
-        departmentDB.put(new Id("d5"), new Department(new Id("d5"), "Departament Międzynarodowej Współpracy w Magicznych Sprawach", Localtion.SPAIN));
-        departmentDB.put(new Id("d6"), new Department(new Id("d6"), "Departament Mgieł i Dymów", Localtion.SPAIN));
-        departmentDB.put(new Id("d7"), new Department(new Id("d7"), "Ministerstwo Mioteł", Localtion.FRANCE));
+        departmentDB.put(new Id("d1"), new Department(new Id("d1"), "Ministerstwo Magii", Location.POLAND));
+        departmentDB.put(new Id("d2"), new Department(new Id("d2"), "Departament Tajemnic", Location.POLAND));
+        departmentDB.put(new Id("d3"), new Department(new Id("d3"), "Departament Kontroli Nad Magicznymi Stworzeniami", Location.FRANCE));
+        departmentDB.put(new Id("d4"), new Department(new Id("d4"), "Departament Przestrzegania Prawa Magicznego", Location.GERMANY));
+        departmentDB.put(new Id("d5"), new Department(new Id("d5"), "Departament Międzynarodowej Współpracy w Magicznych Sprawach", Location.SPAIN));
+        departmentDB.put(new Id("d6"), new Department(new Id("d6"), "Departament Mgieł i Dymów", Location.SPAIN));
+        departmentDB.put(new Id("d7"), new Department(new Id("d7"), "Ministerstwo Mioteł", Location.FRANCE));
     }
 
     public void populateEmployees() {

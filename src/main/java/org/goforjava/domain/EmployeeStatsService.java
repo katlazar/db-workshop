@@ -12,10 +12,10 @@ public interface EmployeeStatsService {
 
     Optional<Department> findDepartmentWithLowestCompensationAverage();
 
-    List<Employee> findEmployeesBasedIn(Localtion localtion);
+    List<Employee> findEmployeesBasedIn(Location location);
 
     Map<Integer, Long> countEmployeesByHireYear();
 
-    Map<Localtion, Long> countEmployeesByLocation();
+    Map<Location, Long> countEmployeesByLocation();
 
 }

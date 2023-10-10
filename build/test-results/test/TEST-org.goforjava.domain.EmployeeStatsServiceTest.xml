@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.goforjava.domain.EmployeeStatsServiceTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2023-10-10T20:21:43" hostname="KS-DTP0684" time="0.061">
+  <properties/>
+  <testcase name="shouldFindDepartmentWithLowestCompensationAverage()" classname="org.goforjava.domain.EmployeeStatsServiceTest" time="0.004"/>
+  <testcase name="[1] 100, 1" classname="org.goforjava.domain.EmployeeStatsServiceTest" time="0.016"/>
+  <testcase name="[2] 80, 5" classname="org.goforjava.domain.EmployeeStatsServiceTest" time="0.001"/>
+  <testcase name="[3] 70, 8" classname="org.goforjava.domain.EmployeeStatsServiceTest" time="0.001"/>
+  <testcase name="[4] 55, 16" classname="org.goforjava.domain.EmployeeStatsServiceTest" time="0.001"/>
+  <testcase name="[5] 43, 28" classname="org.goforjava.domain.EmployeeStatsServiceTest" time="0.0"/>
+  <testcase name="shouldCountEmployeesByLocation()" classname="org.goforjava.domain.EmployeeStatsServiceTest" time="0.002"/>
+  <testcase name="shouldFindThreeTopCompensatedEmployees()" classname="org.goforjava.domain.EmployeeStatsServiceTest" time="0.001"/>
+  <testcase name="shouldCountEmployeesByHireYear()" classname="org.goforjava.domain.EmployeeStatsServiceTest" time="0.0"/>
+  <testcase name="shouldFindEmployeesBasedInGivenLocation()" classname="org.goforjava.domain.EmployeeStatsServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

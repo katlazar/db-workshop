@@ -6,6 +6,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 
+import java.util.stream.Collectors;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -57,14 +59,14 @@ public class EmployeeStatsServiceTest extends EmployeesTest {
     @Test
     void shouldFindEmployeesBasedInGivenLocation() {
         //when
-        var employees = employeeStatsService.findEmployeesBasedIn(Localtion.GERMANY);
+        var employees = employeeStatsService.findEmployeesBasedIn(Location.GERMANY);
 
         //then
         assertEquals(3, employees.size());
-        assertEquals("e10", employees.get(0).getId().getKey());
-        assertEquals("e11", employees.get(0).getId().getKey());
-        assertEquals("e22", employees.get(0).getId().getKey());
-
+        var collectedId = employees.stream().map(e -> e.getId().getKey()).collect(Collectors.toSet());
+        assertTrue(collectedId.contains("e10"));
+        assertTrue(collectedId.contains("e11"));
+        assertTrue(collectedId.contains("e22"));
     }
 
     @Test
@@ -94,10 +96,10 @@ public class EmployeeStatsServiceTest extends EmployeesTest {
 
         //then
         assertEquals(4, byLocationCount.keySet().size());
-        assertEquals(3, byLocationCount.get(Localtion.GERMANY));
-        assertEquals(10, byLocationCount.get(Localtion.POLAND));
-        assertEquals(6, byLocationCount.get(Localtion.SPAIN));
-        assertEquals(11, byLocationCount.get(Localtion.FRANCE));
+        assertEquals(3, byLocationCount.get(Location.GERMANY));
+        assertEquals(10, byLocationCount.get(Location.POLAND));
+        assertEquals(6, byLocationCount.get(Location.SPAIN));
+        assertEquals(11, byLocationCount.get(Location.FRANCE));
     }
 
 
